@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lobster&family=Graduate&family=Josefin+Sans:wght@600;700&display=swap');
+*{
+    font-family: system-ui;
+    font-size: 20px;
+    text-transform: capitalize;
+    color: rgb(112, 65, 10);
+}
+*::selection{
+    background-color: rgba(140, 20, 20, 0.4);
+}
+html{
+    height: 100vh;
+}
+body{
+    background-size: cover;
+    margin: 0px;
+    padding: 50px 100px;
+    animation: fadeInAnimation linear 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    display: flex;
+    flex-direction: row-reverse;
+}
+@keyframes fadeInAnimation {
+    0% {
+        background-image: linear-gradient(rgb(255, 255, 255,0.8),rgb(255, 255, 255,0.8)), url("coffee.png");
+        opacity: 0;
+    }
+    20% {
+        background-image: linear-gradient(rgb(255, 255, 255,0.6),rgb(255, 255, 255,0.6)), url("coffee.png");
+        opacity: .2;
+    }
+    40% {
+        background-image: linear-gradient(rgb(255, 255, 255,0.4),rgb(255, 255, 255,0.4)), url("coffee.png");
+        opacity: .4;
+    }
+    60% {
+        background-image: linear-gradient(rgb(255, 255, 255,0.3),rgb(255, 255, 255,0.3)), url("coffee.png");
+        opacity: .6;
+    }
+    80% {
+        background-image: linear-gradient(rgb(255, 255, 255,0.2),rgb(255, 255, 255,0.2)), url("resources/coffee.png");
+        opacity: .8;
+    }
+    100% {
+        background-image: linear-gradient(rgb(255, 255, 255,0.1),rgb(255, 255, 255,0.1)), url("resources/coffee.png");
+        opacity: 1;
+    }
+}
+hr{
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    height: 5px;
+    border-color:white;
+    border-radius: 3px;
+    border-style: solid;
+}
+.all{
+    width: 60%;
+    text-align: center;
+}
+.description{
+    background-color: white;
+    border-radius: 24px 24px;
+    color: rgb(126, 69, 31);
+    padding: 10px 0px;
+}
+header{
+    border-radius: 25px;
+    border: 5px solid white;
+    z-index: 1;
+    margin-top: 30px;
+    padding: 0px 10px;
+    padding-bottom: 10px;
+    color: white;
+    transition: border-color 1s;
+}
+header h1{
+    margin: 15px 0px;
+    font-size: 54px;
+    font-weight: 1000;
+    font-family: 'Graduate', serif;
+    color: inherit;
+    transition: 0.5s;
+}
+header:hover{
+    color: rgb(250, 132, 35);
+    border-color: rgb(250, 132, 35);
+}
+header p{
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700px;
+}
+.items_group{
+    width: 90%;
+    margin: auto;
+    margin: 20px;
+}
+details > summary:first-of-type{
+    list-style: none;
+}
+summary{
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+}
+.title{
+    font-weight:1000;
+    font-family: 'Lobster', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+summary svg{
+    margin: 0px;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    fill: rgb(250, 132, 35);
+}
+summary svg:hover{
+    transform: rotate(360deg);
+}
+.item{
+    color: rgb(250, 132, 35);
+    padding: 5px 0px;
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+.item:hover{
+    background-color: rgb(199, 166, 123,0.5);
+}
+.item_name{
+    font-family: 'Josefin Sans', sans-serif;
+    margin-left: 10px;
+    text-transform: capitalize;
+    vertical-align: middle;
+}
+.item_price{
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: right;
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    vertical-align: middle;
+}
+.social_media{
+    display: inline-block;
+    padding: 10px 0px;
+    height: 30px;
+}
+a{
+    text-decoration: none;
+}
+.social_media_icon{
+    vertical-align: top;
+    height: 30px;
+    margin: 0 20px;
+    transition: 0.5s;
+    fill: rgb(112, 65, 10);
+}
+.social_media_icon:hover{
+    fill:rgb(250, 132, 35);
+}
+footer{
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items:center;
+}
+#back_arrow{
+    height: 35px;
+}
+
+
+
+@media (min-width:350px) and (max-width:800px){
+    body{
+        flex-flow: column;
+        align-items: center;
+        padding: 0px;
+    }
+    .all{
+        width: 90%;
+    }
+    .item{
+        font-weight: 700;
+    }
+}

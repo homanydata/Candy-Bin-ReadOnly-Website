@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+    font-weight: thin;
+    color: rgb(112, 65, 10);
+    margin: 0px;
+    padding: 0px;
+}
+*::selection{
+    background-color: rgba(206, 165, 119, 0.9);
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+
+
+/* navigator */
+nav{
+    position: sticky;
+    top: 20px;
+    display: flex;
+    height: 10vh;
+    width: 70%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(112, 65, 10);
+    border-radius: 50px;
+    padding: 15px 80px;
+    padding-bottom: 0px;
+    overflow: hidden;
+    z-index: 1;
+}
+.bars,.mobile_nav{
+    display: none;
+}
+.mobile_nav{
+    background-color: rgb(250, 132, 35);
+    color: white;
+    width: 200px;
+    position: absolute;
+    z-index: 1;
+    right: -100px;
+    transition: 1s;
+}
+.logo{
+    padding-left: 2vw;
+    margin-bottom: 0.5%;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 150%;
+}
+nav ul{
+    vertical-align: bottom;
+    display: inline-block;
+    text-transform: uppercase;
+}
+nav ul li{
+    vertical-align: bottom;
+    list-style: none;
+    display: inline-block;
+    margin: 0px 2vw;
+    position: relative;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.3s;
+}
+nav ul li::after{
+    content: '';
+    display: block;
+    width: 0%;
+    height:2px;
+    background: #f44336;
+    margin: auto;
+    margin-top: 10px;
+    transition: 1s;
+}
+nav li:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height:2px;
+    background: rgb(250, 132, 35);
+    margin: auto;
+    margin-top: 10px;
+}
+nav ul li:hover{
+    color: rgb(250, 132, 35);
+}
+
+/* hero section */
+.hero{
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 90vh;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+.text_box{
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-items: center;
+    align-items: center;
+}
+.hero h1{
+    color: rgb(250, 132, 35);
+    font-size: 90px;
+}
+.hero p{
+    color: rgb(250, 132, 35);
+    font-weight: 500;
+    font-size: 20px;
+    margin-top: 50px;
+    text-wrap:balance;
+    line-height: 35px;
+}
+.hero button{
+    margin-top: 5%;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    font-family: "Libre Baskerville", sans-serif;
+    font-size: 40px;
+    border-color: rgb(250, 132, 35);
+    background: none;
+    color: rgb(250, 132, 35);
+    border-style: solid;
+    border-radius: 35px;
+    width: 25vh;
+    height: 9vh;
+    cursor: pointer;
+    transition: 1s;
+    padding: auto 1%;
+}
+.hero button:hover{
+    background-color: rgb(250, 132, 35);
+    color: white;
+}
+.images{
+    width: 30%;
+    position: relative;
+}
+.hero img{
+    width: 25%;
+    border-radius: 0%;
+}
+
+
+/* features section */
+.features{
+    width: 80%;
+    margin: auto;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    color: rgb(250, 132, 35);
+    background-color: white;
+}
+.features div{
+    cursor: pointer;
+    background-color: rgb(112, 65, 10);
+    border-radius: 40px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding: 30px 10px;
+    color: white;
+    width: 20%;
+    height: 35vh;
+    text-align: center;
+}
+.feature_name{
+    display: block;
+    font-size: 50px;
+    color: rgb(250, 132, 35);
+    text-transform: capitalize;
+    margin: 18px;
+}
+.fa-solid{
+    padding-top: 10px;
+    font-size: 120px;
+    color: white;
+}
+.feature_icon{
+    width: 50%;
+}
+.features p{
+    color: rgb(250, 132, 35);
+    text-wrap: balance;
+    margin: 10px;
+}
+.affordable img{
+    margin-top: 10px;
+}
+
+
+/* vans section */
+.vans{
+    margin: 70px auto;
+    background-color: white;
+    text-align: center;
+}
+.vans img{
+    width: 100%;
+    display: block;
+}
+.vans h1{
+    text-transform: capitalize;
+    font-size: 65px;
+    color: rgb(250, 132, 35);
+    margin-bottom: 30px;
+}
+.areas{
+    width: 60%;
+    margin: 80px auto;
+    padding: 35px;
+    background-color: rgb(250, 132, 35);
+    border-radius: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: space-evenly;
+}
+.area{
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    font-size: 30px;
+    flex-grow: 1;
+    margin: 10px;
+    padding: 15px;
+    cursor: pointer;
+    max-width: 25%;
+    min-width: 17%;
+    transition: 0.5s;
+}
+.area:hover{
+    color: rgb(250, 132, 35);
+    background-color: white;
+}
+
+
+
+/* job section */
+.job{
+    width: 80%;
+    margin: 150px auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    line-height: 80px;
+}
+.job h1{
+    color: rgb(112, 65, 10);
+    font-size: 80px;
+    text-transform: capitalize;
+}
+.job h2{
+    color: rgb(112, 65, 10);
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.job button{
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    font-family: "Libre Baskerville", sans-serif;
+    font-size: 40px;
+    border-color: rgb(250, 132, 35);
+    background: none;
+    color: rgb(250, 132, 35);
+    border-style: solid;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 1s;
+    padding: 15px 25px;
+}
+.job button:hover{
+    background-color: rgb(250, 132, 35);
+    color: white;
+}
+
+
+
+/* footer */
+footer{
+    display: flex;
+    flex-flow: column nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+footer p{
+    font-weight: 300;
+    font-size: 24px;
+    color: rgb(250, 132, 35);
+    margin: 10px 25px;
+}
+.social_media{
+    background-color: rgb(112, 65, 10);
+    padding-top: 30px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    margin: 0px 30px;
+    font-size: 30px;
+    text-decoration: none;
+}
+#whatsapp{
+    font-size: 40px;
+}
+footer svg{
+    fill: rgb(250, 132, 35);
+}
+
+
+/* scrolling */
+#up{
+    display: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    height: 50px;
+    fill: rgb(250, 132, 35);
+    cursor: pointer;
+}
+
+
+
+/* @media(max-width:700px) {
+    .logo{
+        margin-bottom: 3%;
+        height: 120%;
+    }
+    nav li{
+        display: none;
+        margin: 0vw 1vw;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    .bars{
+        display: inline;
+        margin: 10px 10px 12px 0px;
+        height: 2em;
+        fill: rgb(250, 132, 35);
+    }
+    .hero h1{
+        font-size: 40px;
+    }
+    .hero p{
+        font-size: 10px;
+    }
+    .hero button{
+        font-size: 20px;
+    }
+}
+/* .category img{
+    border-radius: 50%;
+    width: 220px;
+    height: 200px;
+} */
